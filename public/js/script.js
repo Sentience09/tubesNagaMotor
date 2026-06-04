@@ -1,0 +1,1 @@
+alert("Hello, naga motor!  Welcome to our website.");
