@@ -31,4 +31,9 @@ class HomeController extends Controller
         // Kembali ke halaman depan dengan pesan sukses
         return redirect('/#kontak')->with('success', 'Pesan berhasil dikirim! Tim kami akan segera menghubungi Anda.');
     }
+    public function detail($id)
+    {
+    $mobil = \App\Models\Mobil::with('merek')->findOrFail($id);
+    return view('mobil-detail', compact('mobil'));
+    }
 }
