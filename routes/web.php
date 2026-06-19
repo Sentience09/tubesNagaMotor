@@ -6,6 +6,7 @@ use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MerekController;
 use App\Http\Controllers\Admin\MobilController;
+use App\Http\Controllers\Admin\PesanController;
 
 // 1. Rute Halaman Depan (Landing Page) memanggil HomeController
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -22,4 +23,6 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('merek', MerekController::class);
     Route::resource('mobil', MobilController::class);
+    Route::get('/pesan', [PesanController::class, 'index'])->name('pesan.index');
+    Route::delete('/pesan/{id}', [PesanController::class, 'destroy'])->name('pesan.destroy');
 });
