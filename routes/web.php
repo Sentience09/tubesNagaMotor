@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\PesanController;
 
 // 1. Rute Halaman Depan (Landing Page) memanggil HomeController
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/mobil/{id}', [HomeController::class, 'detail'])->name('mobil.detail');
 Route::post('/kirim-pesan', [HomeController::class, 'storePesan'])->name('pesan.store');
 
 // 2. Rute Login 
