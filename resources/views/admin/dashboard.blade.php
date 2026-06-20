@@ -40,7 +40,7 @@
                 <p class="card-text">Pengunjung yang tertarik.</p>
             </div>
             <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-dark stretched-link" href="#">Lihat Detail</a>
+                <a class="small text-dark stretched-link" href="{{ route('admin.pesan.index') }}">Lihat Detail</a>
                 <div class="small text-dark">></div>
             </div>
         </div>
