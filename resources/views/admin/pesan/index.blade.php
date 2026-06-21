@@ -16,7 +16,15 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.merek.index') }}">Data Merek</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('admin.mobil.index') }}">Data Mobil</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="{{ route('admin.pesan.index') }}">Pesan Masuk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('admin.pesan.index') }}">Pesan Masuk</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="nav-link btn btn-link text-danger border-0">Logout</button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </div>

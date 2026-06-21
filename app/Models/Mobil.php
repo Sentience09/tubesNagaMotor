@@ -16,7 +16,13 @@ class Mobil extends Model
         'harga', 
         'deskripsi', 
         'foto', 
-        'status'
+        'status',
+        'tahun',
+        'tenaga_hp',
+        'akselerasi',
+        'mesin',
+        'torsi',
+        'transmisi'
     ];
 
     // Relasi: Setiap Mobil pasti punya satu Merek (Belongs-To)

@@ -52,6 +52,33 @@
                 <label>Ganti Foto (Kosongkan jika tidak ingin ganti)</label>
                 <input type="file" name="foto" class="form-control" accept="image/*">
             </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label>Tahun</label>
+                    <input type="number" name="tahun" class="form-control" value="{{ $mobil->tahun }}" required>
+                </div>
+                 </div>
+                <div class="col-md-4 mb-3">
+                    <label>Tenaga</label>
+                    <input type="text" name="tenaga_hp" class="form-control" value="{{ $mobil->tenaga_hp }}" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Akselerasi 0-60 MPH</label>
+                    <input type="text" name="akselerasi" class="form-control" value="{{ $mobil->akselerasi }}" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Mesin</label>
+                    <input type="text" name="mesin" class="form-control" value="{{ $mobil->mesin }}" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Torsi</label>
+                    <input type="text" name="torsi" class="form-control" value="{{ $mobil->torsi }}" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Transmisi</label>
+                    <input type="text" name="transmisi" class="form-control" value="{{ $mobil->transmisi }}" required>
+                </div>
+            </div>
 
             <button type="submit" class="btn btn-warning">Update Data</button>
             <a href="{{ route('admin.mobil.index') }}" class="btn btn-secondary">Batal</a>

@@ -35,7 +35,7 @@ class MobilController extends Controller
             'nama_mobil' => 'required|string|max:255',
             'harga'      => 'required|numeric',
             'deskripsi'  => 'required',
-            'foto'       => 'required|image|mimes:jpeg,png,jpg|max:2048', // Maksimal 2MB
+            'foto'       => 'required|image|mimes:jpeg,png,jpg|max:2048', 
         ]);
 
         $input = $request->all();
