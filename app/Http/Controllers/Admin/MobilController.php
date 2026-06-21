@@ -78,7 +78,7 @@ class MobilController extends Controller
         // Cek jika admin mengupload foto baru
         if ($gambar = $request->file('foto')) {
             // Hapus foto lama dari folder public/uploads
-            if(File::exists(public_path('uploads/' . $mobil->foto))){
+            if(!empty($mobil->foto) && File::exists(public_path('uploads/' . $mobil->foto))){
                 File::delete(public_path('uploads/' . $mobil->foto));
             }
 

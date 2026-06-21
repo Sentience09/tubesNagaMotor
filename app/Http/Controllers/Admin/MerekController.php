@@ -52,7 +52,11 @@ class MerekController extends Controller
     // DELETE (POST/DELETE): Menghapus data merek
     public function destroy(Merek $merek)
     {
-        $merek->delete();
-        return redirect()->route('admin.merek.index')->with('success', 'Merek berhasil dihapus!');
+    if ($merek->mobil()->count() > 0) {
+        return redirect()->route('admin.merek.index')->with('error', 'Merek tidak dapat dihapus karena masih ada mobil yang menggunakan merek ini!');
+    }
+
+    $merek->delete();
+    return redirect()->route('admin.merek.index')->with('success', 'Merek berhasil dihapus!');
     }
 }
