@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naga Motor - Jual Beli Mobil Terpercaya</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     
 </head>
@@ -18,6 +17,7 @@
             <div class="collapse navbar-collapse justify-content-end">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#katalog">Katalog</a></li>
+                    <!-- <li class="nav-item"><a class ="nav-link" href="#why"> Mengapa</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
                 </ul>
             </div>
@@ -53,7 +53,7 @@
                 <div class="col-md-4">
                     <div class="car-card">
                         <div style="overflow:hidden;">
-                            <img src="{{ asset('uploads/' . $m->foto) }}" alt="{{ $m->nama_mobil }}">
+                            <img src="{{ asset('uploads/' . $m->foto) }}" alt="{{ $m->nama_mobil }}">   
                         </div>
                         <div class="car-card-body">
                             <div class="car-name">{{ $m->nama_mobil }}</div>
@@ -83,7 +83,7 @@
     </section>
 
     {{-- WHY --}}
-    <section class="section-why">
+    <section id="why" class="section-why">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="why-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80" alt="Featured Car">
+                        <img src="uploads/20260621093035.jpg" alt="Featured Car">
                         <div class="why-img-caption">
                             <h6>Koleksi Unggulan Kami</h6>
                             <p>Salah satu mobil paling dicari dan langka di koleksi kami.</p>
@@ -149,7 +149,7 @@
                     <p class="section-desc text-center mx-auto">Isi form di bawah dan tim kami akan segera menghubungi kamu.</p>
 
                     @if(session('success'))
-                        <div class="alert" style="background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.3); color: #4ade80; border-radius:0; padding: 14px 18px; margin-bottom: 24px;">
+                        <div class="alert">
                             {{ session('success') }}
                         </div>
                     @endif
@@ -181,7 +181,6 @@
         <p>&copy; 2026 Naga Motor. Final Project Web Programming.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function validasiForm() {
             let noHp = document.getElementById("no_hp").value;

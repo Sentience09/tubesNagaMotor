@@ -1,4 +1,6 @@
 :root {
+    --font-heading: 'Arial Black', 'Arial Bold', sans-serif;
+    --font-body: 'Arial-black', sans-serif;
     --red: #E31E24;
     --black: #0D0D0D;
     --dark: #141414;
@@ -12,7 +14,7 @@
 body {
     background-color: var(--black);
     color: var(--white);
-    font-family: 'Barlow', sans-serif;
+    font-family: var(--font-body)
 }
 
 /* NAVBAR */
@@ -24,7 +26,7 @@ body {
     padding: 24px 0;
 }
 .navbar-brand {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 900;
     font-size: 1.6rem;
     color: var(--white) !important;
@@ -46,13 +48,13 @@ body {
 .hero {
     min-height: 100vh;
     background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.85) 100%),
-                url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1600&q=80') center/cover no-repeat;
+                url('/uploads/hero-bg.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     padding-top: 100px;
 }
 .hero-eyebrow {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-size: 5rem;
     font-weight: 900;
     color: rgba(255,255,255,0.07);
@@ -62,7 +64,7 @@ body {
     margin-bottom: -20px;
 }
 .hero-title {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-size: 6.5rem;
     font-weight: 900;
     color: var(--red);
@@ -82,7 +84,7 @@ body {
     color: var(--white);
     border: none;
     padding: 14px 32px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.95rem;
     letter-spacing: 2px;
@@ -97,9 +99,9 @@ body {
 .btn-outline-white {
     background: transparent;
     color: var(--white);
-    border: 1.5px solid rgba(255,255,255,0.35);
+    border: 1.5px solid rgba(255,255,255,0.50);
     padding: 14px 32px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.95rem;
     letter-spacing: 2px;
@@ -112,10 +114,10 @@ body {
 /* CATALOG SECTION */
 .section-catalog {
     background: var(--dark);
-    padding: 90px 0;
+    padding: 50px 0;
 }
 .section-label {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-size: 2.8rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -151,7 +153,7 @@ body {
     padding: 22px 20px 16px;
 }
 .car-name {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 800;
     font-size: 1.2rem;
     letter-spacing: 1px;
@@ -183,7 +185,7 @@ body {
 .car-hp svg { color: var(--red); }
 .car-price {
     color: #4ade80;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1rem;
 }
@@ -200,27 +202,13 @@ body {
 }
 .link-detail:hover { color: #ff4a4f; }
 
-.link-catalog {
-    color: var(--white);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 0.9rem;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    padding-bottom: 2px;
-    transition: border-color 0.2s;
-}
-.link-catalog:hover { border-color: var(--white); color: var(--white); }
-
 /* WHY SECTION */
 .section-why {
     background: var(--black);
     padding: 90px 0;
 }
 .why-title {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -253,7 +241,7 @@ body {
 }
 .why-icon svg { color: var(--red); }
 .why-item-title {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 800;
     font-size: 1rem;
     letter-spacing: 1px;
@@ -281,7 +269,7 @@ body {
     padding: 32px 24px 22px;
 }
 .why-img-caption h6 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 800;
     font-size: 1rem;
     letter-spacing: 1px;
@@ -300,7 +288,7 @@ body {
     text-align: center;
 }
 .cta-title {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-size: 3.5rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -320,7 +308,7 @@ body {
     color: var(--white);
     border: none;
     padding: 16px 40px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.95rem;
     letter-spacing: 2px;
@@ -377,4 +365,13 @@ footer {
     .section-label { font-size: 2rem; }
     .why-title { font-size: 2.2rem; }
     .cta-title { font-size: 2.5rem; }
+}
+
+.alert {
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    color: #4ade80;
+    border-radius: 0;
+    padding: 14px 18px;
+    margin-bottom: 24px;
 }
